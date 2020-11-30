@@ -19,6 +19,7 @@ app.get('/usuario', verificaToken,(req, res) => {
             .skip(desde)
             .limit(limite)
             .exec((err, usuarios) => {
+                
                 if(err) {
                     return res.status(400).json({
                             ok: false,
